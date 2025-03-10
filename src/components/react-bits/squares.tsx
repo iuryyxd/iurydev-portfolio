@@ -79,7 +79,7 @@ const Squares: React.FC<SquaresProps> = ({
         0,
         canvas.width / 2,
         canvas.height / 2,
-        Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2
+        Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2,
       );
       gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
       gradient.addColorStop(1, "#060606");
@@ -131,10 +131,10 @@ const Squares: React.FC<SquaresProps> = ({
       const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
 
       const hoveredSquareX = Math.floor(
-        (mouseX + gridOffset.current.x - startX) / squareSize
+        (mouseX + gridOffset.current.x - startX) / squareSize,
       );
       const hoveredSquareY = Math.floor(
-        (mouseY + gridOffset.current.y - startY) / squareSize
+        (mouseY + gridOffset.current.y - startY) / squareSize,
       );
 
       setHoveredSquare({ x: hoveredSquareX, y: hoveredSquareY });
@@ -167,7 +167,7 @@ const Squares: React.FC<SquaresProps> = ({
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full border-none absolute opacity-15"
+      className="absolute h-full w-full border-none opacity-15"
     ></canvas>
   );
 };

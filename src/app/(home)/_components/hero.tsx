@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="w-full h-dvh text-center flex items-center justify-center flex-col relative md:px-0 px-5">
+    <section className="relative flex h-dvh w-full flex-col items-center justify-center px-5 text-center md:px-0">
       <Squares
         speed={0.5}
         squareSize={40}
@@ -23,16 +23,16 @@ export function Hero() {
         transition={{ duration: 1, ease: "easeOut" }}
         className="flex flex-col gap-14"
       >
-        <div className="max-w-[42.5rem] w-full flex flex-col gap-5  z-[2]">
+        <div className="z-[2] flex w-full max-w-[42.5rem] flex-col gap-5">
           <div>
-            <h4 className="text-base md:text-lg text-gray-300">
+            <h4 className="text-base text-gray-300 md:text-lg">
               Hello World! Me chamo{" "}
-              <span className="text-sky-400 border-b border-sky-400">
+              <span className="border-b border-sky-400 text-sky-400">
                 <Link href="https://github.com/iuryyxd">Iury Sena</Link>
               </span>{" "}
               e sou
             </h4>
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl font-bold md:text-5xl">
               Desenvolvedor Front End
             </h1>
           </div>
@@ -43,7 +43,7 @@ export function Hero() {
           </p>
         </div>
 
-        <ul className="flex flex-wrap justify-center items-center gap-4 z-[2]">
+        <ul className="z-[2] flex flex-wrap items-center justify-center gap-4">
           {stacks.map((stack, index) => {
             return (
               <li key={stack.name + index}>
@@ -54,7 +54,7 @@ export function Hero() {
                     width={20}
                     height={20}
                   />
-                  <span className="text-gray-200 text-xs">{stack.name}</span>
+                  <span className="text-xs text-gray-200">{stack.name}</span>
                 </Badge>
               </li>
             );

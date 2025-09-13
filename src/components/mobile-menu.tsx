@@ -1,9 +1,18 @@
 import { useToggle } from "@/app/hooks/use-toggle";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export function MobileMenu() {
   const { isActive, toggleState } = useToggle();
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isActive]);
 
   return (
     <>
@@ -15,7 +24,7 @@ export function MobileMenu() {
         <Menu />
       </button>
       {isActive && (
-        <div className="absolute right-0 top-0 z-10 block h-dvh w-1/2 overflow-hidden bg-slate-900 px-5 py-2 sm:hidden">
+        <div className="absolute right-0 top-0 z-10 block min-h-dvh w-1/2 overflow-hidden bg-slate-900 px-5 py-2 sm:hidden">
           <ul className="flex flex-col gap-10">
             <button
               type="button"

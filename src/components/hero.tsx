@@ -25,13 +25,13 @@ export function Hero() {
       >
         <div className="z-[2] flex w-full max-w-[42.5rem] flex-col gap-5">
           <div>
-            <h4 className="text-base text-gray-300 md:text-lg">
+            <h2 className="text-base text-gray-300 md:text-lg">
               Hello World! Me chamo{" "}
               <span className="border-b border-sky-400 text-sky-400">
                 <Link href="https://github.com/iuryyxd">Iury Sena</Link>
               </span>{" "}
               e sou
-            </h4>
+            </h2>
             <h1 className="text-4xl font-bold md:text-5xl">
               Desenvolvedor Front End
             </h1>

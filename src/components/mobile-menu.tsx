@@ -30,7 +30,7 @@ export function MobileMenu() {
                 Projetos
               </li>
             </Link>
-            <Link href="#contact">
+            <Link href="https://www.linkedin.com/in/iurysena/" target="_blank">
               <li className="transition-colors hover:text-white/90">Contato</li>
             </Link>
           </ul>

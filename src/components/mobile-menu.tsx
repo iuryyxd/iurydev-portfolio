@@ -34,12 +34,16 @@ export function MobileMenu() {
               <X />
             </button>
 
-            <Link href="#projects">
+            <Link href="#projects" onClick={() => toggleState(false)}>
               <li className="transition-colors hover:text-white/90">
                 Projetos
               </li>
             </Link>
-            <Link href="https://www.linkedin.com/in/iurysena/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/iurysena/"
+              target="_blank"
+              onClick={() => toggleState(false)}
+            >
               <li className="transition-colors hover:text-white/90">Contato</li>
             </Link>
           </ul>
